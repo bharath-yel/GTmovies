@@ -19,7 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    #include is used to include URLs from other URL configuration files
-    path('', include('home.urls'))
+    path('', include('home.urls')),
 ]

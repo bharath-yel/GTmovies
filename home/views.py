@@ -6,6 +6,5 @@ def index(request):
     #render is used to render templates and return an HTTP response
     return render(request, 'home/index.html', {
         'template_data' : template_data})
-
 def about(request):
     return render(request, 'home/about.html')
