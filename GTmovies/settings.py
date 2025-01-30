@@ -58,7 +58,7 @@ ROOT_URLCONF = 'GTmovies.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'GTmovies/templates')],
+        'DIRS': [os.path.join(BASE_DIR,'GTmovies/templates')], #register our base template
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,6 +125,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 STATICFILES_DIRS = [
     BASE_DIR / "GTmovies/static/",
