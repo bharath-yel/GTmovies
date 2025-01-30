@@ -8,4 +8,8 @@ def index(request):
         'template_data' : template_data})
 
 def about(request):
-    return render(request, 'home/about.html')
+    template_data = {}
+    template_data['title'] = 'About'
+    #will pass the template_data variable from views to the template
+    return render(request, 'home/about.html',
+                  {'template_data' : template_data})
