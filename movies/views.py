@@ -1,3 +1,4 @@
+from django.shortcuts import render
 movies = [
     {
         'id': 1, 'name': 'Inception', 'price': 12,
