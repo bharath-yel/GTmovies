@@ -1,0 +1,61 @@
+.bg-index{
+    background: url("/static/img/background.jpg") no-repeat fixed;
+    background-size: cover;
+
+}
+
+.password-reset-container {
+    background: url("/static/img/password.jpg") no-repeat center center;
+}
+
+/* Card styling */
+.password-reset-card {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Center text */
+.password-reset-card h2, .password-reset-card p {
+    text-align: center;
+}
+
+/* Input field styling */
+.password-reset-card input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styling */
+.password-reset-card .btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.password-reset-card .btn:hover {
+    background: darkred;
+}
+
+/* Link styling */
+.password-reset-card a {
+    color: white;
+    text-decoration: none;
+}
+
+.password-reset-card a:hover {
+    text-decoration: underline;
+}

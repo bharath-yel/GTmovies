@@ -1,4 +1,177 @@
 .bg-index{
     background: url("/static/img/background.jpg") no-repeat fixed;
-    background-size: 100% auto;
+    background-size: cover;
+
+}
+
+.password-reset-container {
+    background:
+        url("/static/img/passwordbackground.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.password-reset-card {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.password-reset-card h2, .password-reset-card p {
+    text-align: center;
+}
+
+.password-reset-card input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.password-reset-card .btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.password-reset-card .btn:hover {
+    background: darkred;
+}
+
+.password-reset-card a {
+    color: white;
+    text-decoration: none;
+}
+
+.password-reset-card a:hover {
+    text-decoration: underline;
+}
+
+.password-reset-done {
+    background:
+        url("/static/img/passwordbackground.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.password-reset-done .password-reset-card {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.password-reset-done .password-reset-card h2,
+.password-reset-done .password-reset-card p {
+    text-align: center;
+}
+
+.password-reset-confirm {
+    background:
+        url("/static/img/passwordbackground.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.password-reset-confirm .password-reset-card {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.password-reset-confirm .password-reset-card h2,
+.password-reset-confirm .password-reset-card form {
+    text-align: center;
+}
+
+.password-reset-confirm .password-reset-card input,
+.password-reset-confirm .password-reset-card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.password-reset-confirm .password-reset-card button {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.password-reset-confirm .password-reset-card button:hover {
+    background: darkred;
+}
+
+.password-reset-complete {
+    background:
+        url("/static/img/passwordbackground.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.password-reset-complete .password-reset-card {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.password-reset-complete .password-reset-card h2,
+.password-reset-complete .password-reset-card p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.password-reset-complete .password-reset-card a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.password-reset-complete .password-reset-card a:hover {
+    text-decoration: underline;
 }
