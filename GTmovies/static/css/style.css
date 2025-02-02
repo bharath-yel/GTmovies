@@ -21,8 +21,7 @@
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px
 }
 
 .password-reset-card h2, .password-reset-card p {
@@ -46,7 +45,6 @@
     border: none;
     border-radius: 4px;
     font-size: 16px;
-    cursor: pointer;
 }
 
 .password-reset-card .btn:hover {
@@ -55,7 +53,6 @@
 
 .password-reset-card a {
     color: white;
-    text-decoration: none;
 }
 
 .password-reset-card a:hover {
@@ -80,7 +77,6 @@
     color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
@@ -107,7 +103,6 @@
     color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
@@ -121,7 +116,7 @@
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 4px;
 }
 
@@ -129,7 +124,6 @@
     background: red;
     color: white;
     border: none;
-    cursor: pointer;
     font-size: 16px;
 }
 
@@ -155,14 +149,13 @@
     color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 .password-reset-complete .password-reset-card h2,
 .password-reset-complete .password-reset-card p {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .password-reset-complete .password-reset-card a {
