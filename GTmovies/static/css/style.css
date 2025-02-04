@@ -1,6 +1,5 @@
 .bg-index{
     background: url("/static/img/background.jpg") no-repeat fixed;
-<<<<<<< HEAD
     background-size: 100% auto;
 }
 
@@ -60,10 +59,6 @@ html, body {
 .img-card-400 {
     width: fit-content;
     max-height: 400px;
-}
-=======
-    background-size: cover;
-
 }
 
 .password-reset-container {
@@ -230,4 +225,3 @@ html, body {
 .password-reset-complete .password-reset-card a:hover {
     text-decoration: underline;
 }
->>>>>>> scrum4
