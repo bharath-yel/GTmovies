@@ -21,4 +21,4 @@ def add(request, id):
   cart = request.session.get('cart', {})
   cart[id] = request.POST['quantity']
   request.session['cart'] = cart
-  return redirect('home.index')
+  return redirect('cart.index')
