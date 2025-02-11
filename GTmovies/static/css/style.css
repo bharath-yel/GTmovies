@@ -75,7 +75,7 @@ html, body {
     overflow: hidden;  /* Prevents any scrolling issues */
 }
 
-/* 🛠 Special fix for mobile screens */
+/* Special fix for mobile screens */
 @media (max-width: 768px) {
     .password-reset-container {
         background-size: 100% 100% !important;  /* Force full width & height without cropping */
