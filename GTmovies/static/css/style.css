@@ -64,13 +64,26 @@ html, body {
 .password-reset-container {
     background:
         url("/static/img/passwordbackground.jpg") no-repeat center center;
-    background-size: cover;
-    min-height: 100vh;
+    background-size: cover !important;  /* Ensures it covers the screen */
+    min-height: 100vh;  /* Fills full height */
+    width: 100vw;  /* Ensures it doesn’t overflow horizontally */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    position: relative;
+    overflow: hidden;  /* Prevents any scrolling issues */
 }
+
+/* Special fix for mobile screens */
+@media (max-width: 768px) {
+    .password-reset-container {
+        background-size: 100% 100% !important;  /* Force full width & height without cropping */
+        background-position: top center !important;
+        width: 100vw !important;
+    }
+}
+
 
 .password-reset-card {
     max-width: 500px;
@@ -224,4 +237,45 @@ html, body {
 
 .password-reset-complete .password-reset-card a:hover {
     text-decoration: underline;
+}
+
+/* Fix overflow caused by wide images */
+img {
+    max-width: 100%;  /* Ensures images never exceed their container */
+    height: auto;
+    display: block;  /* Prevents unwanted spacing below images */
+}
+
+/* Ensure the navbar logo is NOT affected */
+.navbar-brand img {
+    max-width: none !important;  /* Keeps the original logo size */
+    height: 70px !important;  /* Adjust this if needed */
+}
+
+/*this stuff under here is extra, but just in case.
+
+/* Fix horizontal scrolling issue */
+html, body {
+    overflow-x: hidden !important;  /* Prevents scrolling to the right */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+/* Ensure the header and footer match any extended width */
+.navbar, .ms-footer, .ms-footer-bottom {
+    min-width: 100vw !important;
+    width: 100% !important;
+}
+
+/* Specifically target content images (not the logo) */
+.main-content img {
+    max-width: 100% !important;  /* Ensures content images scale down */
+    height: auto !important;
+}
+
+/*Center images that might be too large */
+.main-content img {
+    margin: 0 auto;
+    display: block;
 }
