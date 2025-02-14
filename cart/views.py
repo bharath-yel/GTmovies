@@ -45,21 +45,20 @@ def index(request):
   return render(request, 'cart/index.html',
                 {'template_data': template_data})
 def add(request, id):
-    get_object_or_404(Movie, id=id)
     cart = request.session.get('cart', {})
+    new_quantity = int(request.POST.get('quantity', 1))
     if str(id) in cart:
-        cart[str(id)] += 1
+        cart[str(id)] += new_quantity
     else:
-        cart[str(id)] = 1
+        cart[str(id)] = new_quantity
     request.session['cart'] = cart
     return redirect('cart.index')
 
 def remove(request, id):
     cart = request.session.get('cart', {})
     if str(id) in cart:
-        quantity = int(cart[str(id)])
-        if quantity > 1:
-            cart[str(id)] = quantity - 1
+        if cart[str(id)] > 1:
+            cart[str(id)] -= 1
         else:
             del cart[str(id)]
     request.session['cart'] = cart
