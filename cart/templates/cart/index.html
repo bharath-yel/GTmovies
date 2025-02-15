@@ -16,11 +16,13 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Price</th>
+                        <th scope="col">Item Price</th>
                         <th scope="col">Quantity</th>
+                        <th scope="col">Subtotal</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     {% for movie in template_data.movies_in_cart %}
                     <tr>
@@ -28,6 +30,7 @@
                         <td>{{ movie.name }}</td>
                         <td>${{ movie.price }}</td>
                         <td>{{ request.session.cart|get_quantity:movie.id }}</td>
+                        <td>${{ request.session.cart|get_quantity:movie.id|multiply:movie.price }}</td>
                         <td>
                             <a href="{% url 'cart.add' movie.id %}" class="btn btn-sm btn-success ms-2">
                                 Add
