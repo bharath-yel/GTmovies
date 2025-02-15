@@ -76,13 +76,23 @@ def add(request, id):
         return redirect('cart.index')
 
 def remove(request, id):
-    cart = request.session.get('cart', {})
-    if str(id) in cart:
-        if cart[str(id)] > 1:
-            cart[str(id)] -= 1
+    if request.user.is_authenticated:
+        cart = get_object_or_404(Cart, user=request.user)
+        cart_item = get_object_or_404(CartItem, cart=cart, id=id)
+
+        if cart_item.quantity > 1:
+            cart_item.quantity -= 1
+            cart_item.save()
         else:
-            del cart[str(id)]
-    request.session['cart'] = cart
+            cart_item.delete()
+    else:
+        cart = request.session.get('cart', {})
+        if str(id) in cart:
+            if cart[str(id)] > 1:
+                cart[str(id)] -= 1
+            else:
+                del cart[str(id)]
+        request.session['cart'] = cart
     return redirect('cart.index')
 
 def clear(request):
