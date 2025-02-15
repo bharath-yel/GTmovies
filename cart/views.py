@@ -62,6 +62,8 @@ def add(request, id):
         cart_item, created = CartItem.objects.get_or_create(cart=cart, movie=movie)
         if not created:
             cart_item.quantity += int(request.POST.get('quantity', 1))
+        else:
+            cart_item.quantity = int(request.POST.get('quantity', 1))
         cart_item.save()
 
         return redirect('cart.index')
@@ -77,8 +79,8 @@ def add(request, id):
 
 def remove(request, id):
     if request.user.is_authenticated:
-        cart = get_object_or_404(Cart, user=request.user)
-        cart_item = get_object_or_404(CartItem, cart=cart, id=id)
+        cart = Cart.objects.get_or_create(user=request.user)[0]
+        cart_item = CartItem.objects.get(cart=cart, movie_id=id)
 
         if cart_item.quantity > 1:
             cart_item.quantity -= 1
@@ -96,5 +98,11 @@ def remove(request, id):
     return redirect('cart.index')
 
 def clear(request):
-    request.session['cart'] = {}
+    if request.user.is_authenticated:
+        cart = Cart.objects.get_or_create(user=request.user)[0]
+        cart.movies.clear()
+        cart_items = CartItem.objects.filter(cart=cart)
+        cart_items.delete()
+    else:
+        request.session['cart'] = {}
     return redirect('cart.index')
