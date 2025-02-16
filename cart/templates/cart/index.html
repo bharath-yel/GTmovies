@@ -24,13 +24,13 @@
                 </thead>
 
                 <tbody>
-                    {% for movie in template_data.movies_in_cart %}
+                    {% for movie, quantity in template_data.movies_in_cart %}
                     <tr>
                         <td>{{ movie.id }}</td>
                         <td>{{ movie.name }}</td>
                         <td>${{ movie.price }}</td>
-                        <td>{{ request.session.cart|get_quantity:movie.id }}</td>
-                        <td>${{ request.session.cart|get_quantity:movie.id|multiply:movie.price }}</td>
+                        <td>{{ quantity }}</td>
+                        <td>${{ movie.price|multiply:quantity }}</td>
                         <td>
                             <a href="{% url 'cart.add' movie.id %}" class="btn btn-sm btn-success ms-2">
                                 Add
